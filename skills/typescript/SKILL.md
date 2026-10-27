@@ -4,7 +4,7 @@ description: when coding in typescript or javascript.
 ---
 first, read /skill:coding
 
-prefer typescript over javascript always.
+strongly prefer typescript over javascript always.
 
 prefer bun over npm and node
 
