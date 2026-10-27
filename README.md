@@ -3,5 +3,5 @@
 Clone into `~/.agents`:
 
 ```bash
-git clone https://github.com/GlorificusGit/agents.git ~/.agents
+git clone git@github.com:GlorificusGit/agents.git ~/.agents
 ```
