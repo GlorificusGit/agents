@@ -4,6 +4,8 @@ description: Bash scripting conventions. Use when writing or editing shell scrip
 ---
 first, read /skill:coding
 
+after writing a script, don't assume you should run it
+
 # Bash if statements:
 
 avoid:
