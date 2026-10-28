@@ -20,12 +20,12 @@ If your gh auth seems insufficient, ask the user, do not try to work around it.
 
 # SSH key passphrases
 IMPORTANT! If you EVER see an error mentioning 'ssh_askpass', you need to ask the user to load it for you.
+If you see 'Permission denied (publickey)' without seeing 'ssh_askpass', it might still a passphrase issue as well.
 DO NOT retry with another key. You (not the user) must check git config for the specific SSH key with this command:
 ```sh
 git config core.sshCommand
 ```
-Then immediately prompt the user to run:
+If you find a SSH keyfile name from that command, then immediately prompt the user to run:
 ```sh
 ssh-add <key>
 ```
-
