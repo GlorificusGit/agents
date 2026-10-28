@@ -3,6 +3,7 @@ name: system-admin
 description: Linux system administration. Use when installing packages/programs, editing system config, or making any change outside the project directory.
 ---
 Admin tasks must be done the right way. Orderly, not hacky.
+The user should not be surprised by your actions.
 
 # Principles
 - prefer apt over apt-get
@@ -21,6 +22,7 @@ If a required step needs privilege or a decision you can't make, stop and ask th
 - A package is missing and installing it changes the system in a non-trivial way.
 - The official method is unavailable and the alternatives are sketchy.
 - Something would touch system config, services, users, or firewall.
+- SSH key use requires a password
 
 Ask with: what failed, what you wanted to run, and what the options are. Then wait.
 
