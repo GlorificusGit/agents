@@ -30,3 +30,4 @@ avoid starting lines with '{'
 
 avoid: while read -r
 
+avoid: \

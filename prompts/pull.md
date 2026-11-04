@@ -1,0 +1,1 @@
+git pull the current branch. if that branch is main, also summarize the incoming changes.
