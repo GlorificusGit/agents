@@ -17,6 +17,7 @@ If a remote is HTTP, switch it: `git remote set-url origin git@github.com:owner/
 `gh` is available.
 
 If your gh auth seems insufficient, ask the user, do not try to work around it.
+When talking about specific pull requests to the user, include their date.
 
 # SSH key passphrases
 IMPORTANT! If you EVER see an error mentioning 'ssh_askpass', you need to ask the user to load it for you.

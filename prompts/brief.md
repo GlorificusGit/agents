@@ -1,0 +1,1 @@
+create a brief interactive report using pure html. show diagrams and any other visual aid that might be useful. The topic is:
