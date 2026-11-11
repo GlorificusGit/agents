@@ -1,8 +1,10 @@
-Perform a rebase of the main branch into this feature branch.
-Please do the following:
-- git squash the feature branch together to 1 commit compared to local main. if local main is not strictly behind the feature branch, skip this step.
-- git fetch the most up to date main branch from remote.
-- git rebase that main branch into the feature branch.
-- fix the conflicts if any. first look for conflicts in log.md
-- git push force with lease to the remote feature branch.
-- summarize the conflicts
+Follow these instructions to rebase this feature branch onto the latest <remote>/main:
+
+- Stop if on `main` or the working tree is dirty.
+- `git fetch <remote>`
+- Squash to 1 commit: `git reset --soft $(git merge-base <remote>/main HEAD)`, then commit with a message summarizing the squashed commits. Skip if already 1 commit ahead.
+- `git rebase <remote>/main`
+- Resolve conflicts. If a resolution is ambiguous, stop and ask me.
+- Run the project's build/tests, if any.
+- `git push --force-with-lease`
+- Report any unexpected conflicts
