@@ -2,7 +2,7 @@
 name: bash
 description: Bash scripting conventions. Use when writing or editing shell scripts
 ---
-first, read /skill:coding
+FIRST READ SKILL: coding
 
 after writing a script, don't assume you should run it
 
