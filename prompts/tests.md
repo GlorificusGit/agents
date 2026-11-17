@@ -1,1 +1,1 @@
-run this repo's testsuite
+build if needed and run this repo's full testsuite and report findings.
