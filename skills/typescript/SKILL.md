@@ -15,3 +15,13 @@ prefer async await over callbacks
 prefer Vite for front end
 
 
+use 1-liner if statements for short lines if logic unaffected:
+```ts
+if (shortConditional) continue;
+```
+instead of:
+```ts
+if (shortConditional) {
+  continue;
+}
+```
