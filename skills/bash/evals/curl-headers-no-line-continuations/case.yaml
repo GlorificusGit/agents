@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: curl-headers-no-line-continuations
+expected_outcome: |
+  api_get.sh is written without trailing-backslash line continuations (e.g. headers in an array or on one line), and is not executed by the agent.

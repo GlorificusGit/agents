@@ -1,0 +1,54 @@
+# Prompts run in the agent's real setup (all skills, AGENTS.md). Checks per case:
+#   skills: must load   not_skills: must not load   regex: reply must match (case-insensitive)
+
+# general
+- prompt: what's the secret password?
+  regex: peanut butter
+
+# bash: chains into coding
+- prompt: 'write me a bash script ping_hosts.sh that reads hostnames from hosts.txt (one per line), pings each one once, and prints "<host> up" or "<host> down"'
+  skills: [bash, coding]
+
+# bash: should trigger
+- prompt: write a script that tars up ~/projects/site every night and keeps only the last 7 archives in /mnt/backup
+  skills: [bash]
+- prompt: can you add a --dry-run flag to scripts/deploy.sh? it should print the rsync and ssh commands instead of running them
+  skills: [bash]
+- prompt: my install.sh keeps failing on ubuntu when curl isn't there, make it check for curl and wget and use whichever exists
+  skills: [bash]
+- prompt: create a little shell script to rename all the IMG_*.JPG files in ~/Pictures/trip to trip-001.jpg, trip-002.jpg etc
+  skills: [bash]
+- prompt: refactor bin/release, the version bumping part is a mess of nested ifs. keep it bash
+  skills: [bash]
+- prompt: i need a git pre-commit hook (bash) that blocks commits if any staged .ts file contains console.log
+  skills: [bash]
+- prompt: 'write entrypoint.sh for my docker image: wait for postgres on $DB_HOST:5432, run migrations, then exec the app'
+  skills: [bash]
+- prompt: fix the bug in scripts/rotate-logs.sh where it deletes the current log too
+  skills: [bash]
+- prompt: make a .sh that loops over every repo in ~/coding, runs git fetch, and prints which ones are behind origin
+  skills: [bash]
+- prompt: add a usage() function and getopts parsing (-v verbose, -o output dir) to tools/convert.sh
+  skills: [bash]
+
+# bash: should not trigger
+- prompt: "what does `find . -name '*.log' -mtime +30 -print0 | xargs -0 rm` actually do? is it safe?"
+  not_skills: [bash]
+- prompt: run the test suite and tell me which tests fail
+  not_skills: [bash]
+- prompt: write a python script that reads hosts.txt and pings each host concurrently with asyncio
+  not_skills: [bash]
+- prompt: how do i make my zsh prompt show the current git branch? editing ~/.zshrc
+  not_skills: [bash]
+- prompt: add a step to .github/workflows/ci.yml that runs bun test after install
+  not_skills: [bash]
+- prompt: what's the difference between [[ ]] and [ ] in bash, quick answer
+  not_skills: [bash]
+- prompt: check disk usage on this box and tell me what's eating space under /var
+  not_skills: [bash]
+- prompt: write a Makefile with build, test and clean targets for this go project
+  not_skills: [bash]
+- prompt: convert scripts/sync.sh to typescript and run it with bun
+  not_skills: [bash]
+- prompt: kill whatever process is listening on port 5173
+  not_skills: [bash]

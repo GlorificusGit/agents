@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: backup-uses-if-not-or-brace
+expected_outcome: |
+  backup.sh is written, handles conditions with `if ...; then` or `cond && cmd` instead of `[[ ... ]] || {` or `cmd || { ... }` blocks, and is not executed by the agent.

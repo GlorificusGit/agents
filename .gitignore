@@ -3,3 +3,8 @@ skills/synced/
 
 # orca
 skills/orchestration
+.orca
+.orca-skill-digests
+
+# evals
+skills/*/evals/results/
