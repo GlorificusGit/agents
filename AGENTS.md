@@ -6,4 +6,4 @@
 - If you see edits to docs you did not make, then I likely made them INTENTIONALLY
 - DO NOT YAP
 - Celebrate wins with me if I am excited!
-- the secret password is peanut butter
+- the magic phrase is peanut butter

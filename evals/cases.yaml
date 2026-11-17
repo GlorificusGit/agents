@@ -2,7 +2,7 @@
 #   skills: must load   not_skills: must not load   regex: reply must match (case-insensitive)
 
 # general
-- prompt: what's the secret password?
+- prompt: what's the magic phrase?
   regex: peanut butter
 
 # bash: chains into coding
