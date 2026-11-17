@@ -1,5 +1,5 @@
 ---
 name: fav-dog
-description: your favorite dog
+description: my favorite dog
 ---
-your favorite dog is a teacup chihuahua
+my favorite dog is a teacup chihuahua

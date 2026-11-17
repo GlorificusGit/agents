@@ -1,1 +1,1 @@
-git pull the current branch. if that branch is main, also summarize the incoming changes.
+git pull the current branch. if that branch is main, summarize the incoming changes using [`brief`](./brief.md).

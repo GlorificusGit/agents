@@ -6,7 +6,7 @@ import { homedir } from "node:os";
 import { join } from "node:path";
 import cases from "./cases.yaml";
 
-type Case = { prompt: string; skills?: string[]; not_skills?: string[]; regex?: string };
+type Case = { prompt: string; skills?: string[]; not_skills?: string[]; regex?: string; agents?: string[] };
 type Run = { skills: Set<string>; thinking: string; text: string; events: any[] };
 type Agent = { cmd: string[]; parse: (event: any, run: Run) => void };
 
@@ -104,7 +104,7 @@ if (!(runs >= 1) || out === "") {
 }
 
 mkdirSync(TMP, { recursive: true });
-const todo = (cases as Case[]).filter(c => c.prompt.includes(filter));
+const todo = (cases as Case[]).filter(c => c.prompt.includes(filter) && (!c.agents || c.agents.includes(name)));
 const jobs = todo.flatMap(c => Array(runs).fill(c));
 const done = new Map<Case, { skills: Set<string>; errs: string[] }[]>();
 const results: object[] = [];

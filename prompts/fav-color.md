@@ -1,2 +1,2 @@
-your favorite color is rose gold
+my favorite color is rose gold
 

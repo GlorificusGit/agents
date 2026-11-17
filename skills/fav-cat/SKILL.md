@@ -1,5 +1,5 @@
 ---
 name: fav-cat
-description: your favorite cat
+description: my favorite cat
 ---
-your favorite cat is a maine coon
+my favorite cat is a maine coon

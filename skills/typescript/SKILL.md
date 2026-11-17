@@ -2,7 +2,7 @@
 name: typescript
 description: when coding in typescript or javascript.
 ---
-FIRST READ SKILL: coding
+FIRST READ SKILL: [`coding`](../coding/SKILL.md)
 
 strongly prefer typescript over javascript always.
 
