@@ -19,13 +19,13 @@
 #
 
 # bash should trigger
-- prompt: 'write me a bash script ping_hosts.sh that reads hostnames from hosts.txt (one per line), pings each one once, and prints "<host> up" or "<host> down"'
+- prompt: 'write me a bash script ping_hosts.sh that reads hostnames from a hypothetical hosts.txt (one per line), pings each one once, and prints "<host> up" or "<host> down"'
   skills: [bash, coding]
   not_skills: [typescript]
-- prompt: write a script that tars up ~/projects/site every night and keeps only the last 7 archives in /mnt/backup
+- prompt: write a script that tars up site/ every night and keeps only the last 7 archives in /mnt/backup (both dirs are hypothetical)
   skills: [bash, coding]
   not_skills: [typescript]
-- prompt: create a little shell script to rename all the IMG_*.JPG files in ~/Pictures/trip to trip-001.jpg, trip-002.jpg etc
+- prompt: create a little shell script to rename all the IMG_*.JPG files in a hypothetical photos/trip dir to trip-001.jpg, trip-002.jpg etc
   skills: [bash, coding]
   not_skills: [typescript]
 - prompt: i need a git pre-commit hook (bash) that blocks commits if any staged .ts file contains console.log
@@ -34,25 +34,35 @@
 - prompt: 'write entrypoint.sh for my docker image: wait for postgres on $DB_HOST:5432, run migrations, then exec the app'
   skills: [bash, coding]
   not_skills: [typescript]
-- prompt: make a .sh that loops over every repo in ~/coding, runs git fetch, and prints which ones are behind origin
+- prompt: make a .sh that loops over every repo under a hypothetical repos/ dir, runs git fetch, and prints which ones are behind origin
   skills: [bash, coding]
   not_skills: [typescript]
 
 # bash should not trigger
 - prompt: "what does `find . -name '*.log' -mtime +30 -print0 | xargs -0 rm` actually do? is it safe?"
   not_skills: [bash]
-- prompt: write a python script that reads hosts.txt and pings each host concurrently with asyncio
+- prompt: write a python script that reads a hypothetical hosts.txt and pings each host concurrently with asyncio
   not_skills: [bash]
-- prompt: how do i make my zsh prompt show the current git branch? editing ~/.zshrc
+- prompt: how do i make my zsh prompt show the current git branch?
   not_skills: [bash]
 - prompt: what's the difference between [[ ]] and [ ] in bash, quick answer
   not_skills: [bash]
 - prompt: check disk usage on this box and tell me what's eating space under /var
   not_skills: [bash]
-- prompt: write a Makefile with build, test and clean targets for this go project
+- prompt: write a Makefile with build, test and clean targets for a hypothetical go project
   not_skills: [bash]
-- prompt: convert scripts/sync.sh to typescript and run it with bun
+- prompt: convert a hypothetical scripts/sync.sh to typescript and run it with bun
   skills: [typescript, coding]
   not_skills: [bash]
 - prompt: kill whatever process is listening on port 5173
   not_skills: [bash]
+
+# evals should trigger
+- prompt: write an eval case that checks the agent uses fetch instead of axios when asked for an http client in a hypothetical node project
+  skills: [evals]
+- prompt: add a regex grader to a hypothetical prompt.md eval that fails if the reply contains a TODO
+  skills: [evals]
+
+# evals should not trigger
+- prompt: how do i evaluate a math expression string in python without using eval()?
+  not_skills: [evals]

@@ -1,4 +1,4 @@
 schema_version: "1.1"
 name: ping-hosts-no-while-read
 expected_outcome: |
-  ping_hosts.sh is written, iterates hosts.txt without a `while read` loop, and is not executed by the agent.
+  ping_hosts.sh is given in the reply, iterates hosts.txt without a `while read` loop.
