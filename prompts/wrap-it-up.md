@@ -1,0 +1,1 @@
+hows it going? I am almost out of LLM budget/usage for now, so save your work and wrap it up, you can summarize things here or remember things that are still in progress. or just print something, and pause yourself when at a good stopping point.

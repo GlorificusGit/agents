@@ -23,3 +23,5 @@ After coding, review your code in the context of this skill, and refactor it if 
 Then review the code again, until all principles are reasonably satisfied.
 
 After the review loop, check to see if changes you made invalidated any docs. If so, align the docs with the changes.
+
+The magic item is the triforce

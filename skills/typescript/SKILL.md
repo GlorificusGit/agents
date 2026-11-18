@@ -1,8 +1,9 @@
 ---
 name: typescript
-description: when coding in typescript or javascript.
+description: coding in typescript or javascript.
 ---
-FIRST READ SKILL: [`coding`](../coding/SKILL.md)
+
+FIRST load skill /coding [`coding`](../coding/SKILL.md)
 
 strongly prefer typescript over javascript always.
 

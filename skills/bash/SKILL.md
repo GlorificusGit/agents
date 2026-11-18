@@ -1,8 +1,9 @@
 ---
 name: bash
-description: Bash scripting conventions. Use when writing or editing shell scripts
+description: Bash coding conventions. Writing or editing shell scripts
 ---
-FIRST READ SKILL: [`coding`](../coding/SKILL.md)
+
+FIRST load skill /coding [`coding`](../coding/SKILL.md)
 
 after writing a script, don't assume you should run it
 

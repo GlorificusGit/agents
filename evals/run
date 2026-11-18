@@ -108,19 +108,19 @@ const todo = (cases as Case[]).filter(c => c.prompt.includes(filter) && (!c.agen
 const jobs = todo.flatMap(c => Array(runs).fill(c));
 const done = new Map<Case, { skills: Set<string>; errs: string[] }[]>();
 const results: object[] = [];
-let next = 0, failed = 0;
+let next = 0, passed = 0;
 async function worker() {
   while (next < jobs.length) {
     const c = jobs[next++];
     const r = await run(agent, c);
     const rs = done.get(c) ?? [];
     const runErrs = check(c, r);
+    if (!runErrs.length) passed++;
     rs.push({ skills: r.skills, errs: runErrs });
     done.set(c, rs);
     results.push({ prompt: c.prompt, pass: !runErrs.length, errs: runErrs, skills: [...r.skills], thinking: r.thinking, text: r.text, events: r.events });
     if (rs.length < runs) continue;
     const passes = rs.filter(x => !x.errs.length).length;
-    if (passes < runs) failed++;
     const skills = new Set(rs.flatMap(x => [...x.skills]));
     const errs = [...new Set(rs.flatMap(x => x.errs))];
     const note = errs.length ? ` — ${errs.join(", ")}` : "";
@@ -129,10 +129,10 @@ async function worker() {
   }
 }
 await Promise.all(Array.from({ length: JOBS }, worker));
-console.log(`${todo.length - failed}/${todo.length} passed`);
+console.log(`${passed}/${jobs.length} passed`);
 if (out) {
   mkdirSync(out, { recursive: true });
   writeFileSync(join(out, "results.json"), JSON.stringify({ agent: name, args: extra, results }, null, 2));
   console.log(`wrote ${join(out, "results.json")}`);
 }
-process.exit(failed ? 1 : 0);
+process.exit(passed < jobs.length ? 1 : 0);

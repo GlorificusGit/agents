@@ -2,11 +2,11 @@
 #   skills: must load   not_skills: must not load   regex: reply must match (case-insensitive)
 #   agents: only run for these agents (default all)
 
-# general
+# read agents.md
 - prompt: what's the magic phrase?
   regex: peanut butter
 
-# prompts
+# read prompts
 - prompt: /fav-book what is my favorite book?
   regex: harry potter and the prisoner of azkaban
   agents: [pi, claude]
@@ -14,7 +14,11 @@
   regex: '^(?=[\s\S]*harry potter and the prisoner of azkaban)(?=[\s\S]*rose gold)'
   agents: [pi, claude]
 
-# bash: should trigger, and always chain into coding
+#
+# skill triggers
+#
+
+# bash should trigger
 - prompt: 'write me a bash script ping_hosts.sh that reads hostnames from hosts.txt (one per line), pings each one once, and prints "<host> up" or "<host> down"'
   skills: [bash, coding]
   not_skills: [typescript]
@@ -34,7 +38,7 @@
   skills: [bash, coding]
   not_skills: [typescript]
 
-# bash: should not trigger
+# bash should not trigger
 - prompt: "what does `find . -name '*.log' -mtime +30 -print0 | xargs -0 rm` actually do? is it safe?"
   not_skills: [bash]
 - prompt: write a python script that reads hosts.txt and pings each host concurrently with asyncio
