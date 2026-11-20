@@ -1,0 +1,1 @@
+Loop: run the claude code review on low '/code-review low' against the outstanding changes and fix reasonable issues. Then, run the review again and fix issues until there are no more reasonable issues to fix. You may pause and ask for input from me at any time if you are unsure if you should fix something.
